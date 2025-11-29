@@ -26,10 +26,10 @@ st.set_page_config(
 CUSTOM_CSS = """
 <style>
 .stApp {
-    background: linear-gradient(135deg, #778fa1, #4c8e9c);
+    background: linear-gradient(135deg, #5095b3, #19282e);
 }
 [data-testid="stSidebar"] {
-    background: linear-gradient(135deg, #778fa1, #4c8e9c);
+    background: linear-gradient(135deg, #5095b3, #19282e);
 }
 .main-title {
     font-size: 3rem;
