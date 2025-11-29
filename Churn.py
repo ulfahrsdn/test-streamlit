@@ -29,12 +29,12 @@ CUSTOM_CSS = """
     background: linear-gradient(135deg, #778fa1, #4c8e9c);
 }
 [data-testid="stSidebar"] {
-    background: linear-gradient(180deg, #ede7f6, #e0f7fa);
+    background: linear-gradient(135deg, #778fa1, #4c8e9c);
 }
 .main-title {
     font-size: 3rem;
     font-weight: 800;
-    color: #0c4c85; #Biru tua
+    color: #0c4c85; 
     margin-bottom: 0.25rem;
 }
 .sub-title {
@@ -571,17 +571,17 @@ def main() -> None:
     Main function to control page routing and layout.
     """
     # Sidebar header
-    st.sidebar.markdown("<h2 style='color:#1e88e5; margin-bottom:0.5rem;'>🧠 Churn App</h2>", unsafe_allow_html=True)
-    st.sidebar.markdown("<p style='font-size:0.9rem; color:#546e7a;'>Aplikasi untuk EDA dan prediksi Customer Churn.</p>", unsafe_allow_html=True)
+    st.sidebar.markdown("<h2 style='color:#0c4c85; margin-bottom:0.5rem;'>🧠 Churn App</h2>", unsafe_allow_html=True)
+    st.sidebar.markdown("<p style='font-size:0.9rem; color:#1a1d1f;'>Aplikasi untuk EDA dan prediksi Customer Churn.</p>", unsafe_allow_html=True)
 
     # Navigation
     page = st.sidebar.radio("Pilih Halaman", ("Exploratory Data Analysis (EDA)", "Prediksi Churn"), index=0)
 
     st.sidebar.markdown("---")
     st.sidebar.markdown(
-        "<p style='font-size:0.8rem; color:#78909c;'>"
+        "<p style='font-size:0.8rem; color:#1a1d1f;'>"
         f"Model: <b>{MODEL_FILENAME}</b><br>"
-        "Pastikan file model berada di direktori yang sama dengan <b>App Churn.py</b>."
+        "Pastikan file model berada di direktori yang sama dengan <b>Churn.py</b>."
         "</p>",
         unsafe_allow_html=True,
     )
