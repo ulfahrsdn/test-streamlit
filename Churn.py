@@ -1,4 +1,4 @@
-# App Churn.py (fixed)
+# Churn.py (fixed)
 import os
 import joblib
 from typing import List, Optional, Tuple
