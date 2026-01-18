@@ -1,4 +1,4 @@
-# Churn.py (Solid Cream & Turquoise Theme)
+# Churn.py 
 import os
 import joblib
 from typing import List, Optional, Tuple
@@ -20,16 +20,25 @@ st.set_page_config(
     layout="wide",
 )
 
-# Custom CSS styling for solid cream & turquoise UI
+# Custom CSS styling
 CUSTOM_CSS = """
 <style>
 .stApp {
     background-color: #fdf6e3; /* solid cream muda */
-    color: #00796b; /* turquoise gelap untuk teks */
+    color: #00796b; /* default teks */
 }
 [data-testid="stSidebar"] {
     background-color: #fdf6e3; /* solid cream muda */
     color: #00796b;
+}
+.stSidebar div[role="radiogroup"] label {
+    font-size: 1.1rem; /* radio button font size */
+    font-weight: 600;   /* bold */
+    color: #00796b;     /* kontras */
+}
+.stSidebar p, .stSidebar span {
+    font-size: 0.95rem; /* info file, ukuran lebih besar */
+    color: #00796b;     /* kontras */
 }
 .main-title {
     font-size: 3rem;
@@ -50,7 +59,7 @@ CUSTOM_CSS = """
     margin-bottom: 0.2rem;
 }
 .metric-card {
-    background-color: #fdf6e3; /* solid cream */
+    background-color: #fdf6e3;
     padding: 1rem 1.5rem;
     border-radius: 1rem;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
@@ -94,9 +103,7 @@ CATEGORICAL_FEATURES_DEFAULT = [
 # =========================================================
 # UTILITY FUNCTIONS
 # =========================================================
-def load_local_sample_data(
-    paths: Optional[List[str]] = None,
-) -> Optional[pd.DataFrame]:
+def load_local_sample_data(paths: Optional[List[str]] = None) -> Optional[pd.DataFrame]:
     if paths is None:
         paths = [
             os.path.join(BASE_DIR, "df_data_cleaning.csv"),
@@ -135,9 +142,7 @@ def load_model_and_scaler(model_path: str) -> Tuple[Optional[object], Optional[o
     scaler = None
     try:
         if not os.path.exists(model_path):
-            st.error(
-                f"Model file '{os.path.basename(model_path)}' tidak ditemukan di:\n{model_path}"
-            )
+            st.error(f"Model file '{os.path.basename(model_path)}' tidak ditemukan di: {model_path}")
             return None, None
         model = joblib.load(model_path)
     except Exception as exc:
