@@ -24,7 +24,7 @@ st.set_page_config(
 CUSTOM_CSS = """
 <style>
 .stApp {
-    background-color: #d4b792; /* solid cream muda */
+    background-color: #ebdac5; /* solid cream muda */
     color: #00796b; /* default teks */
 }
 [data-testid="stSidebar"] {
