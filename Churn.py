@@ -25,36 +25,58 @@ st.set_page_config(
 # Custom CSS styling for bright, modern UI
 CUSTOM_CSS = """
 <style>
+/* App Background */
 .stApp {
-    background: linear-gradient(135deg, #5095b3, #19282e);
+    background: #FBF6F1;
 }
+
+/* Sidebar */
 [data-testid="stSidebar"] {
-    background: linear-gradient(135deg, #5095b3, #19282e);
+    background: #F1E6DA;
 }
+
+/* Main Title */
 .main-title {
     font-size: 3rem;
     font-weight: 800;
-    color: #0c4c85; 
+    color: #8B4A1F;
     margin-bottom: 0.25rem;
 }
+
+/* Subtitle */
 .sub-title {
     font-size: 1.1rem;
-    color: #0c4c85;
+    color: #6B3F1D;
     margin-bottom: 1.5rem;
 }
+
+/* Section Header */
 .section-header {
     font-size: 1.4rem;
     font-weight: 700;
-    color: #0c4c85;
+    color: #8B4A1F;
     margin-top: 1.2rem;
     margin-bottom: 0.2rem;
 }
+
+/* Metric Card */
 .metric-card {
-    background-color: rgba(255, 255, 255, 0.90);
+    background-color: #FFFFFF;
     padding: 1rem 1.5rem;
     border-radius: 1rem;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    border-left: 6px solid #9FD0CC;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
     margin-bottom: 1rem;
+}
+
+/* Highlight Warning (FP / FN) */
+.metric-warning {
+    border-left: 6px solid #F4B400;
+}
+
+/* Text */
+body, p, span {
+    color: #3F3F3F;
 }
 </style>
 """
