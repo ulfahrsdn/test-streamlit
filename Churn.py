@@ -307,12 +307,6 @@ def render_eda_page() -> None:
             type=["csv", "xls", "xlsx"],
             key="eda_uploader",
         )
-    with col_upload2:
-        st.info(
-            "Jika tidak ada file di-upload, aplikasi akan mencoba "
-            "menggunakan `df_data_cleaning.csv` sebagai sample data "
-            "(jika tersedia di server)."
-        )
 
     if uploaded_file is not None:
         df = read_uploaded_file(uploaded_file)
