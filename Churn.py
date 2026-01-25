@@ -603,7 +603,6 @@ def main() -> None:
     st.sidebar.markdown(
         "<p style='font-size:0.8rem; color:#1a1d1f;'>"
         f"Model: <b>{MODEL_FILENAME}</b><br>"
-        "Pastikan file model berada di direktori yang sama dengan <b>Churn.py</b>."
         "</p>",
         unsafe_allow_html=True,
     )
